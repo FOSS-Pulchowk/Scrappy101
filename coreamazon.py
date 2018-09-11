@@ -16,9 +16,12 @@ if not len(amazon_block):
     amazon_block=amazon_soup.find("div",class_="s-item-container")
 
 for block in amazon_block:
-    price=int("".join(block.find("span", class_="a-color-price").text[2:].split(",")))
+    try:
+        price=int("".join(block.find("span", class_="a-color-price").text[2:].split(",")))
+    except:
+        continue
     name=block.find("h2").text
-    if item_name.lower() not in name.lower() or price<5000 :
+    if item_name.lower() not in name.lower() or price<200 :
         continue
     amazon_set.append((name, price))
 

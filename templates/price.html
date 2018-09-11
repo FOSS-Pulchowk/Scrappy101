@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<h2> Items in Amazon</h2>
+
+{% if amazon|length > 0 %}
+<ul>
+    {% for item in amazon %}
+
+    <li>{{item[0]}} {{item[1]}}</li>
+    {% endfor %}
+</ul>
+To visit Amazon click <a href={{amazon_url}} target="_blank">here</a>.
+{% else %}
+    Sorry, we couldn't find any items in Amazon.
+{% endif %}
+
+
+<h2> Items in Flipkart</h2>
+
+{% if flipkart|length > 0 %}
+<ul>
+    {% for item in flipkart %}
+
+    <li>{{item[0]}} {{item[1]}}</li>
+    {% endfor %}
+</ul>
+To visit Flipkart click <a href={{flipkart_url}} target="_blank">here</a>.
+{% else %}
+    Sorry, we couldn't find any items in Amazon.
+{% endif %}
+
+{% endblock %}
