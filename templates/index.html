@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Scrappy101</title>
-</head>
-<body>
-<h1> Welcome to Scrappy101</h1>
-{% block body %}
-{% endblock %}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+        <title>Scrappy101</title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'w3.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+
+
+    </head>
+    <body class="w3-light-gray">
+        <div id="loading"></div>
+
+        <div id="content">
+            <div class="w3-bar w3-teal w3-wide">
+                <a class="w3-bar-item w3-button w3-hover-blue" href="{{url_for('index')}}">
+                    <h1>Scrappy101</h1>
+                </a>
+            </div>
+            <div class="w3-container">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+        <script type="text/javascript">// <![CDATA[
+        function loading(){
+            $("#loading").show();
+            $("#content").hide();
+        }
+        // ]]></script>
+
+    </body>
 </html>

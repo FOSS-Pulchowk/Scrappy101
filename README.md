@@ -5,7 +5,7 @@ This is a micro-project on web-scrapping using Python modules. It belongs to org
 ## Scrappy_CLI.py
 It is for the commandline interface of Scrappy101.
 
-## objectflask.py
+## objectflaskapp.py
 It is for the interface of Webapp written in flask.
 
 ## Dependencies
@@ -17,5 +17,5 @@ It requires following Python3 modules:
 ## Instructions to run
 
 `$ python3 filename.py`
-    where *filename.py* is either *Scrappy_CLI.py* or *objectflask.py*
+    where *filename.py* is either *Scrappy_CLI.py* or *objectflaskapp.py*
 

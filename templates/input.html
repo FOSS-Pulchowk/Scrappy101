@@ -2,10 +2,9 @@
 
 {% block body %}
 
-<form action="{{ url_for('price') }}" method="post">
-    <input type="text" name="name" placeholder="Enter name of product">
-    <button>Submit</button>
+<form class="w3-panel w3-card-4" action = "{{ url_for('price') }}" method="post">
+    <input class="w3-input" type="text" name="name" placeholder="Enter name of product">
+    <!--<button onclick="loading();">Submit</button>-->
+    <button class="w3-btn w3-blue w3-hover-teal" type="submit" onclick="loading();" >Submit</button>
 </form>
-
-
 {% endblock %}
