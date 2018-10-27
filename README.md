@@ -13,6 +13,10 @@ It requires following Python3 modules:
   * *flask*
   * *beautifulsoup4*
   * *requests*
+
+To get all the dependencies, do
+
+`pip install -r requirements.txt` being in this project folder.
   
 ## Instructions to run
 
